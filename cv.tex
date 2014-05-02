@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \iffalse %%%%
+%                                                                              %
+%  Copyright (c) 2013 - Michiel Helvensteijn   (www.mhelvens.net)              %
+%                                                                              %
+%  Please don't modify and distribute the LaTeX code of my personal CV.        %
+%  The cv.tex file and the rubric files are not released under an open         %
+%  source license. That's only the my-cv.cls and my-whenprinting.sty files.    %
+%                                                                              %
+%  I include these files merely as a usage example.                            %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \fi %%%%
+
+\documentclass[final,a4paper]{my-cv}
+
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CV Headers                                                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\leftheader{
+	Address: & Est. Comandante	\\
+	         & Camacho Freitas 128    		\\
+	         & 9020 346, Funchal    		\\
+	         & Portugal		    			\\
+	Phone:   & +351 91 4752202    			\\
+	E-mail:  & \pdfemail{lopes.joao.pedro@fe.up.pt}
+}
+
+\rightheader{
+	Gender:          & Male      		\\
+	Nationality:     & Portuguese     	\\
+	Marital status:  & Single    		\\
+	Birth-date:      & 13-09-1990 		\\
+	Website:         & \pdfurl{www.jlopes.pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QR Code                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\photoscale{0.1}
+\setlength{\photosep}{1mm}
+\photo[r]{qrcode.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% My Name                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\myname{João P.C. Lopes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}                                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makerubric{education}
+\makerubric{interests}
+\makerubric{professional-experience}
+\makerubric{teaching-experience}
+\clearpage
+\makerubric{academic-projects}
+\makerubric{academic-activities}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
