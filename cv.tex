@@ -1,67 +1,110 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \iffalse %%%%
-%                                                                              %
-%  Copyright (c) 2013 - Michiel Helvensteijn   (www.mhelvens.net)              %
-%                                                                              %
-%  Please don't modify and distribute the LaTeX code of my personal CV.        %
-%  The cv.tex file and the rubric files are not released under an open         %
-%  source license. That's only the my-cv.cls and my-whenprinting.sty files.    %
-%                                                                              %
-%  I include these files merely as a usage example.                            %
-%                                                                              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \fi %%%%
-
-\documentclass[final,a4paper]{my-cv}
-
-\usepackage{microtype}
+\documentclass{tccv}
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CV Headers                                                                   %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
 
-\leftheader{
-	Address: & Est. Comandante	\\
-	         & Camacho Freitas 128    		\\
-	         & 9020 346, Funchal    		\\
-	         & Portugal		    			\\
-	Phone:   & +351 91 4752202    			\\
-	E-mail:  & \pdfemail{lopes.joao.pedro@fe.up.pt}
-}
+\part{João P.C. Lopes}
 
-\rightheader{
-	Gender:          & Male      		\\
-	Nationality:     & Portuguese     	\\
-	Marital status:  & Single    		\\
-	Birth-date:      & 13-09-1990 		\\
-	Website:         & \pdfurl{www.jlopes.pt}
-}
+\section{Public projects}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QR Code                                                                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{yearlist}
 
-\photoscale{0.1}
-\setlength{\photosep}{1mm}
-\photo[r]{qrcode.pdf}
+\item{2014}
+    {Stock Portfolio \newline
+    (\href{https://github.com/lopis/StockPortfolioUbuntu}{github/lopis/StockPortfolioUbuntu})}
+    {Simple stock ticker app for Ubuntu phone; my first experience with the Ubuntu SDK and Ubuntu Phone environment.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% My Name                                                                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{2014}
+    {Jadex Tutorial \newline
+    (\href{http://paginas.fe.up.pt/~ei10009/jadex/doku.php}{fe.up.pt/~ei10009/jadex/doku.php})}
+    {Jadex reference page created for students, created as a Student Assistant for an AI course}
 
-\myname{João P.C. Lopes}
+\item{2013}
+    {TchiRSS \newline
+    (\href{https://github.com/lopis/tchiRSS}{github/lopis/tchiRSS})}
+    {A web app created as a hobby to easily track changes to RSS feeds without having to rely on other services. Still ocasionally updated. }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}                                                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{2013}
+    {Frown API \newline
+    (\href{https://github.com/lopis/frown}{github/lopis/frown})}
+    {A REST web service that powers avatar enabled applications using SVG.
+    Built in PHP using CodeIgniter.}
 
-\makerubric{education}
-\makerubric{interests}
-\makerubric{professional-experience}
-\makerubric{teaching-experience}
-\clearpage
-\makerubric{academic-projects}
-\makerubric{academic-activities}
+\item{2012}
+    {Guess Me Out \newline
+    (\href{https://github.com/lopis/Guess-Me-Out}{github/lopis/Guess-Me-Out})}
+    {An on-line, social ``guess who'' mobile game for meeting new people.
+    Developed for \emph{Android} devices; webservice in \emph{Rails}.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}                                                                 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{2012}
+    {City Bomber \newline
+    (\href{https://github.com/lopis/citybomber}{github/lopis/citybomber})}
+    {A location-based game of ``bomberman'' where players are supposed
+    to take down each other with bombs placed in the field with augmented reality. \emph{Android} game with \emph{Java} backend.}
+
+\end{yearlist}
+
+\section{Teaching experience}
+
+\begin{eventlist}
+
+\item{September 2013 -- January 2014}
+    {Faculty of Engineering, U Porto}
+    {Student Assistant for AI course}
+
+As a Student Assistant for the course of ``Agents and Distributed AI'', I was meant to assist students in the development of their semester-long projects. Throughout the semester, I also produced an extensive wiki-tutorial with several examples and explanations.
+
+\end{eventlist}
+
+\personal[www.jlopes.pt]
+    {www.github.com/lopis}
+    {Porto, Portugal}
+    {joaopclopes@gmail.com}
+
+\section{Education}
+
+\begin{yearlist}
+
+\item[MIEIC/FEUP]{2010 -- 2014}
+    {Integrated Masters in IT Engineering and Computation}
+    {(Current grade mean of 14 or so)
+    Faculty of Engineering \newline University of Porto}
+
+\item[LEI/UMa]{2008 -- 2010}
+    {IT Engineering}
+    {University of Madeira}
+\end{yearlist}
+
+\section{Interests}
+\begin{factlist}
+    \item{}{Software Development}
+    \item{}{Artificial Intelligence}
+    \item{}{Interaction}
+    \item{}{Web Development}
+    \item{}{Mobile Applications}
+    \item{}{Cooking and cycling}
+\end{factlist}
+
+\section{Writing and Speech}
+\begin{factlist}
+\item{Portuguese}{Native speaker}
+\item{English}{Oral: fair -- Written: good}
+\item{Spanish}{Oral: fair -- Written: fair}
+\item{German}{Oral: some -- Written: some}
+\end{factlist}
+
+\section{Skills}
+\begin{factlist}
+\item{Programming}
+    {Java, JS/Node, HTML, CSS, PHP, Ruby, Rails, \LaTeX, MySQL, Python}
+
+\item{Tools/Frameworks}
+    {Eclipse, Linux, Git, Android SDK, Ubuntu SDK, Rails, CodeIgniter, JDT}
+
+\item{Misc}
+    {Photoshop, Drawing, 3D Modelling}
+
+\end{factlist}
+
+\end{document}
