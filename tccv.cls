@@ -33,6 +33,7 @@
 \RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
 
+
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
 %
@@ -61,7 +62,7 @@
 \definecolor{link}{HTML}{506060} % Hyperlinks
 \hypersetup{colorlinks,breaklinks,urlcolor=link,linkcolor=link}
 \setkomafont{disposition}{\color[HTML]{801010}}
-\setkomafont{section}{\scshape\Large\mdseries}
+\setkomafont{section}{\sc\Large\mdseries}
 
 % In tccv \part must contain the subject of the curriculum vitae.
 % The command will start a new page and output in onecolumn the
@@ -105,19 +106,28 @@
 % \personal[optional: web site without scheme (no http:// prefix)]
 %          {address}{phone number}{email}
 % ]|
+
+\RequirePackage{graphicx}
+\newcommand*\Location{\includegraphics{icons/location.pdf}}
+\newcommand*\Link{\includegraphics{icons/link.pdf}}
+\newcommand*\Github{\includegraphics{icons/github.pdf}}
+\newcommand*\Mail{\includegraphics{icons/mail.pdf}}
+\newcommand*\User{\includegraphics{icons/user.pdf}}
+
 \newcommand\personal[4][]{%
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
     \colorbox[HTML]{F5DD9D}{%
         \begin{tabularx}{\boxwidth}{c|X}
-            \Telefon    & {#3}\smallskip\\
-            \Letter     & \href{mailto:#4}{#4}\smallskip\\
-            \Mundus     & \href{http://#2}{#2}\smallskip\\
-            \Mundus     & \href{http://#1}{#1}\smallskip\\
+            \Location   & {#3}\smallskip\\
+            \Mail       & \href{mailto:#4}{#4}\smallskip\\
+            \Github     & \href{http://#2}{#2}\smallskip\\
+            \User       & \href{http://#1}{#1}\smallskip\\
         \end{tabularx}
     }
 }
+
 
 % Every \item can be followed by one or more paragraphs
 % of description:
@@ -131,9 +141,9 @@
     \newcommand*\inskip{}
     \renewcommand\item[3]{%
 	\inskip%
-	{\raggedleft\sc ##1\\[1pt]}
+	{\textsc{ ##1}\\[1pt]}
 	{##2}\\[2pt]
-	{\Large\it ##3}
+	{\bfseries ##3}
 	\medskip
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
@@ -146,9 +156,9 @@
 % ]|
 \newenvironment{yearlist}{%
     \renewcommand\item[4][]{%
-	{\sc ##2} & {\bfseries ##3} \\
-	\ifstrempty{##1}{}{& {\sc ##1} \\}
-	& {\it ##4}\medskip\\}
+	{\textsc{ ##2}} & {\bfseries ##3} \\
+	\ifstrempty{##1}{}{& {\textsc{ ##1}} \\}
+	& {\textit{##4}}\medskip\\}
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
 
